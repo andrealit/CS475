@@ -26,7 +26,7 @@
 #endif
 
 #ifndef NUMNODES
-#define NUMNODES 45800
+#define NUMNODES 2
 #endif
 
 const float N = 2.5f;
