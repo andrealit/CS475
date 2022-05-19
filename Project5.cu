@@ -35,7 +35,9 @@ int NUMTRIES = 20;
 int NUMBLOCKS = (NUMTRIALS / BLOCKSIZE);
 
 /* 
-Three BLOCKSIZES: 8, 32, 128, 
+At least three BLOCKSIZES: 8, 32, 128, 512, 2048
+
+At least these NUMTRIALS: 1024, 4096, 16384, 65536, 262144, 1048576, 2097152, 4194304
 
 */
 
@@ -135,7 +137,7 @@ __global__ void MonteCarlo(IN float* dtxs, IN float* dtys, IN float* dtxvs, IN f
 
 	if (fabs(truckx - sbx) < dhalflens[gid])
 	{
-		dhits[gid] = 1000;
+		dhits[gid] = 1;
 	}
 }
 
